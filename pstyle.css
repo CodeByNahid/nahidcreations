@@ -1,0 +1,164 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+#homepage {
+    display: inline-block;
+    text-decoration: none;
+}
+
+#homepage div {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Icon */
+#homepage i {
+    font-size: 22px;
+    color: black;
+}
+
+/* Hover Effect */
+#homepage:hover div {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+header h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #111;
+    letter-spacing: 2px;
+}
+
+/* PROJECT CONTAINER GRID */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: auto; /* Changed from 0 */
+    min-height: 200px; /* Add minimum height */
+    overflow: visible; /* Changed from hidden */
+    border-radius: 15px;
+    margin-bottom: 15px;
+    background: #000; /* Optional: adds background while loading */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+/* PROJECT CARD */
+.project-box {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hover Animation */
+.project-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* IMAGE & VIDEO */
+.project-box img,
+.project-box video {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    max-height: 250px;
+}
+
+/* TITLE */
+.project-box h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+/* DESCRIPTION */
+.project-box p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #222;
+}
+
+/* LINKS */
+.project-box a {
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.project-box a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE IMPROVEMENTS */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .project-box {
+        padding: 15px;
+    }
+
+    .project-box img,
+    .project-box video {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .project-container {
+        gap: 20px;
+    }
+}
