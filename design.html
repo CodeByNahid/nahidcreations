@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design & Editing by Nahid</title>
+
+    <link rel="shortcut icon" href="assets/des_icon.png">
+    <link rel="stylesheet" href="pstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" id="homepage">
+        <div><i class="fa-solid fa-home"></i></div>
+    </a>
+    <h1>DESIGN & EDITING</h1>
+</header>
+
+<div class="project-container">
+
+    <!-- CARD 1 -->
+    <a href="https://drive.google.com/drive/folders/1w0pP-w05YU1ILncBLKru9BYrKAhvuPNj?usp=sharing" target="_blank" class="card-link">
+        <div class="project-box">
+            <img src="assets/des/social_post.png" alt="Social Media Post Design">
+            <h3>Social Media Post Design</h3>
+            <p>500+ Post Design for Local and International clients</p>
+        </div>
+    </a>
+
+    <!-- CARD 2 -->
+    <a href="https://drive.google.com/drive/folders/1RNTc7IvtZJ7Hq-XEsaZmx6UrrRH6FqWA?usp=sharing" target="_blank" class="card-link">
+        <div class="project-box">
+            <img src="assets/des/pinterest_pins.png" alt="Pinterest Pins Design">
+            <h3>Pinterest Pins Design</h3>
+            <p>2500+ Pins Design for Local and International clients</p>
+        </div>
+    </a>
+
+    <!-- CARD 3 -->
+    <a href="https://drive.google.com/drive/folders/1NySWD_J8N-5Uv49We6txJqG3cfsRDBaA?usp=sharing" target="_blank" class="card-link">
+        <div class="project-box">
+            <img src="assets/des/thumbnail.png" alt="YouTube Thumbnails">
+            <h3>YouTube Thumbnails Design</h3>
+            <p>700+ Thumbnails Design for International clients</p>
+        </div>
+    </a>
+
+    <!-- CARD 4 -->
+    <a href="https://drive.google.com/drive/folders/1WBp8wq6p_vyPhxldilp5X8r2kN4mmb_r?usp=sharing" target="_blank" class="card-link">
+        <div class="project-box">
+            <img src="assets/des/poster.png" alt="Poster and T-Shirt Design">
+            <h3>Poster & T-Shirt Design</h3>
+            <p>100+ Poster and T-Shirt Designs</p>
+        </div>
+    </a>
+
+    <!-- VIDEO EDITOR CARD -->
+    <div class="project-box">
+        <img src="assets/des/video_editor.png" alt="Video Editor">
+        <h3>Video Editor</h3>
+        <p>
+            Editing videos for 
+            <a href="https://www.youtube.com/@RajshahirNahid" target="_blank">Rajshahir Nahid</a>,
+            <a href="https://www.youtube.com/@nh_nahid" target="_blank">NH Nahid</a>,
+            <a href="https://www.youtube.com/@onride97" target="_blank">ON Ride</a>,
+            <a href="https://www.youtube.com/@CodeByNahid" target="_blank">Code By Nahid</a>,
+            <a href="https://www.youtube.com/@mentornahid" target="_blank">Mentor Nahid</a>
+        </p>
+    </div>
+
+    <!-- YOUTUBE PLAYLIST -->
+    <div class="project-box">
+        <div class="video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/videoseries?list=PLqFr9ZwpApulvka_idXxtSZEdmrwtoxn2"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <h3>Edited Videos by Nahid</h3>
+        <p>Over 1500+ Edited Videos</p>
+    </div>
+
+</div>
+
+<script>
+const boxes = document.querySelectorAll('.project-box');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, { threshold: 0.1 });
+
+boxes.forEach(box => observer.observe(box));
+</script>
+
+</body>
+</html>
